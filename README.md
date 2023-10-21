@@ -36,7 +36,7 @@ For more details, please check: [OpenAI Pricing](https://openai.com/pricing)
 
 ### Estimations
 
-If I use the API for gpt3.5 the most basic API call should cost 0.0035 (input + output) which would require 
+If I use the API for gpt3.5 the most basic API call should cost 0.0035 (input + output) which would require
 ~ 5,700 calls to consume 20.00 USD.
 
 We can considere each API call as an interaction with ChatGPT, and I can asure you that I'm not interacting
@@ -70,7 +70,7 @@ flowchart LR
     step_3_b["Display error message"]
     step_4["User submits question (prompt) in chat"]
     step_5["OpenAI API response is streamed to chat"]
-    
+
     step_1 --> step_2
     step_2 -- Yes --> step_3_a
     step_2 -- No --> step_3_b
