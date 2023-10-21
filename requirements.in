@@ -5,3 +5,4 @@ bandit
 # app
 openai
 streamlit
+watchdog
