@@ -3,14 +3,25 @@ from __future__ import annotations
 import openai
 import streamlit as st
 
-st.title("ChatGPT-like clone")
+from src.config import config
+from src.streamlit import widgets
 
-# Set OpenAI API key from Streamlit secrets
-openai.api_key = st.secrets.openai.api_key
+# Set Page Configuration
+st.set_page_config(
+    page_title=config()["app"]["page_title"],
+    page_icon=config()["app"]["page_icon"],
+)
+st.title(config()["app"]["title"])
+
+# OpenAI API Key Validation
+widgets.openai_key_validation()
+
+# Onboard User
+st.markdown("\n\n".join(config()["app"]["onboarding"]))
 
 # Set a default model
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-3.5-turbo"
+    st.session_state["openai_model"] = config()["llm"]["default_model"]
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -22,7 +33,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # Accept user input
-if prompt := st.chat_input("What is up?"):
+if prompt := st.chat_input(config()["app"]["chat_instruction"]):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
     # Display user message in chat message container
