@@ -88,9 +88,9 @@ For more, reference: [Streamlit Community Cloud](https://streamlit.io/cloud)
 
 ## Learning Logs
 
-| Date | Learning |
-|------|----------|
-|      |          |
+| Date       | Learning                                                                                      |
+|------------|-----------------------------------------------------------------------------------------------|
+| 10/21/2023 | You need to be careful with assigning `open.api_key` multiple times or at different contexts. |
 
 ## Resources
 
