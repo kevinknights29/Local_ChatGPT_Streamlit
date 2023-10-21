@@ -14,6 +14,9 @@ This project aims to create a Local ChatGPT with Streamlit
 
 ---
 
+<img width="1278" alt="image" src="https://github.com/kevinknights29/Local_ChatGPT_Streamlit/assets/74464814/5d272a41-f3e7-4008-8a94-ea2bdef08661">
+<img width="1278" alt="image" src="https://github.com/kevinknights29/Local_ChatGPT_Streamlit/assets/74464814/fe98d97d-ed18-4495-84bc-b0c69e7a142b">
+
 ## Overview
 
 ### Problem Statement
