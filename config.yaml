@@ -1,0 +1,20 @@
+app:
+  page_title: "Personal ChatGPT"
+  page_icon: "👤💻"
+  title: "👤💻 Personal ChatGPT"
+  onboarding:
+    - "👋 Welcome to our chatbot application! Here's a brief guide on how to interact with it:"
+    - "1️⃣ Start by typing your message or question in the chatbox. The chatbot will respond based on the input
+    you provide."
+    - "3️⃣ If at any point you want to restart the conversation or clear the chat history, simply click the reset button
+      provided."
+    - "4️⃣ While responding to the chatbot, you can also use specific commands such as `help` to request assistance or
+    `options` to explore available features."
+    - "5️⃣ Remember to be patient as the chatbot processes your input and generates a response.
+    It might take a few seconds, but it will be worth the wait!"
+    - "6️⃣ If you encounter any issues or need further help, don't hesitate to reach out to our support team using the
+      designated contact information."
+    - "That's it! Start typing your message now and enjoy conversing with our chatbot. 🤖💬"
+  chat_instruction: "Insert your prompt here: "
+llm:
+  default_model: "gpt-3.5-turbo"
