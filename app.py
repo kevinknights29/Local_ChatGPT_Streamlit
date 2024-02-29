@@ -63,7 +63,7 @@ if prompt := st.chat_input(config()["app"]["chat_instruction"]):
     output_tokens = len(encoding.encode(full_response))
     output_price = output_tokens * config()["llm"]["output_price"]
 
-    st.text_area(
-        "Total Price: ",
-        value=f"{(input_price + output_price):.2f} USD || {input_price} input cost || {output_price} output cost",
-    )
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Total Cost", f"{(input_price + output_price):.2f} USD")
+    col2.metric("Input Cost", f"{input_price:.4f} USD")
+    col3.metric("Output Cost", f"{output_price:.4f} USD")
