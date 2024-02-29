@@ -18,3 +18,7 @@ app:
   chat_instruction: "Insert your prompt here: "
 llm:
   default_model: "gpt-3.5-turbo"
+  input_price: 0.0005
+  output_price: 0.0015
+embeddings:
+  encoding_model: "cl100k_base"
