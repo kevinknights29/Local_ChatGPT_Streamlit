@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import openai
 import streamlit as st
+import tiktoken
 
 from src.config import config
 from src.streamlit import widgets
@@ -55,3 +56,14 @@ if prompt := st.chat_input(config()["app"]["chat_instruction"]):
             message_placeholder.markdown(full_response + "▌")
         message_placeholder.markdown(full_response)
     st.session_state.messages.append({"role": "assistant", "content": full_response})
+
+encoding = tiktoken.get_encoding(config()["embeddings"]["encoding_model"])
+input_tokens = len(encoding.encode(prompt))
+input_price = input_tokens * config()["llm"]["input_token_price"]
+output_tokens = len(encoding.encode(full_response))
+output_price = output_tokens * config()["llm"]["output_token_price"]
+
+st.text_area(
+    "Total Price: ",
+    value=f"{(input_price + output_price):.2f} USD || {input_price} input cost || {output_price} output cost",
+)
