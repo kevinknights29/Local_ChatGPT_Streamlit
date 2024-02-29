@@ -6,3 +6,4 @@ bandit
 openai
 streamlit
 watchdog
+tiktoken
